@@ -1,10 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Diwali Vidhuu ❤️</title>
+<title>Happy Diwali Vidhuu 🤎</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -223,6 +222,33 @@ canvas {
     pointer-events: none;
     z-index: 5;
 }
+
+/* BROWN HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    color: #8B4513;
+    font-size: 22px;
+    pointer-events: none;
+    z-index: 2;
+    animation: heartFloat linear infinite;
+    text-shadow: 0 0 12px rgba(139,69,19,.6);
+}
+
+@keyframes heartFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% { opacity: .9; }
+    85% { opacity: .8; }
+    100% {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
 </style>
 </head>
 
@@ -239,7 +265,7 @@ canvas {
 
     <h1>Happy Diwali</h1>
 
-    <div class="name">Vidhuu ❤️</div>
+    <div class="name">Vidhuu 🤎</div>
 
     <div class="divider">✧ ❀ ✧</div>
 
@@ -280,7 +306,7 @@ canvas {
 
             It would be that little smile of yours.<br>
             Because somehow, you make my world<br>
-            brighter without even trying. ❤️
+            brighter without even trying. 🤎
         </div>
 
         <div class="protection">
@@ -289,11 +315,11 @@ canvas {
             No matter what life brings your way,<br>
             I'll always stand beside you,<br>
             protect your smile, guard your heart,<br>
-            and make sure you never feel alone. ❤️
+            and make sure you never feel alone. 🤎
         </div>
 
         <div class="signature">
-            Your forever safe place. ❤️
+            Your forever safe place. 🤎
         </div>
 
         <p style="margin-top:20px;color:#ffce83;font-size:13px;line-height:2;">
@@ -304,7 +330,7 @@ canvas {
     </div>
 
     <footer>
-        MADE WITH LOVE ❤️ JUST FOR YOU
+        MADE WITH LOVE 🤎 JUST FOR YOU
     </footer>
 
 </div>
@@ -326,6 +352,21 @@ for(let i=0; i<45; i++) {
     document.body.appendChild(p);
 }
 
+/* FLOATING BROWN HEARTS */
+
+for(let i=0; i<18; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "🤎";
+
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.animationDuration = (8+Math.random()*10) + "s";
+    heart.style.animationDelay = Math.random()*10 + "s";
+    heart.style.fontSize = (15+Math.random()*18) + "px";
+
+    document.body.appendChild(heart);
+}
+
 /* SURPRISE REVEAL */
 
 function revealLove() {
@@ -334,7 +375,7 @@ function revealLove() {
     box.style.display = "block";
 
     document.querySelector("button").innerHTML =
-        "YOU ARE MY FAVOURITE LIGHT ❤️";
+        "YOU ARE MY FAVOURITE LIGHT 🤎";
 
     launchFireworks();
 
@@ -417,4 +458,3 @@ animate();
 
 </body>
 </html>
-```
